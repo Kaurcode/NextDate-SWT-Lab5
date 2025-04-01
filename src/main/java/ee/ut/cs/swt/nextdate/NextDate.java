@@ -89,16 +89,16 @@ public class NextDate {
 						tomorrowMonth = 3;
 					}
 				}
-                if(day == 29){
-                    if(isLeapYear(year)){ //AND a leap year - reset the day to 1, month to 3
-                        tomorrowDay = 1;
-                        tomorrowMonth = 3;
-                    }
-// else
-                    // return "Invalid Input Date";
-                }
-                else if(day > 29) //invalid input as February will never have more than 29 days
-                    return "Invalid Input Date";
+				if(day == 29){
+					if(isLeapYear(year)){ //AND a leap year - reset the day to 1, month to 3
+						tomorrowDay = 1;
+						tomorrowMonth = 3;
+					}
+					else
+						return "Invalid Input Date";
+				}
+				else //if(day > 29) invalid input as February will never have more than 29 days
+					return "Invalid Input Date";
             }
 		}
 		//return the string representing the nextDate, in the form MM/DD/YY
